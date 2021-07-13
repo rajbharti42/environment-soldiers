@@ -1,0 +1,82 @@
+{% extends 'basic.html' %}
+{% block content %}
+{% load static %}
+<style>
+    .navbar{
+        background:black;
+    }
+    section {
+        background-color: rgba(116, 149, 116, 0.911);
+    }
+
+    .form form {
+
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        width: 80vw;
+        background-color: rgb(255, 255, 255);
+        
+    }
+
+    .form {
+        padding: 50px;
+
+
+    }
+
+    form label,
+    input {
+
+        padding-left: 20px;
+        margin: 5px;
+    }
+
+    form input {
+        height: 22px;
+    }
+
+    .bnt {
+        margin: auto;
+        width: 100px;
+
+    }
+    .messages{
+        padding: 8px;
+        color: red;
+        background: rgb(255, 255, 255);
+    }
+
+</style>
+
+<section>
+    <div class="form">
+     
+        <form action="register" method="POST">
+            {% csrf_token %}
+            <h1 class="center">Registration Form</h1>
+            <label for="text">First Name:</label>
+            <input type="text" name="first_name" placeholder="First Name"><br>
+            <label for="text">Last Name</label>
+            <input type="text" name="last_name" placeholder="last Name"><br>
+            <label for="text">Username</label>
+            <input type="text" name="username" placeholder="Username"><br>
+            <label for="text">Email</label>
+            <input type="email" name="email" placeholder="Email"><br>
+            <label for="text">Password</label>
+            <input type="password" name="password1" placeholder="Password"><br>
+            <label for="text">Conform Password</label>
+            <input type="password" name="password2" placeholder="Conform Password"><br>
+            <button class="bnt" type="submit">Submit</button>
+
+            <div class="messages">
+                {% for message in messages%}
+                <strong>{{message}}</strong>
+                {% endfor %}
+            </div>
+        </form>
+    </div>
+
+</section>
+
+{% endblock %}

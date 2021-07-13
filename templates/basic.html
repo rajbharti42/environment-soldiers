@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Environment soldiers</title>
+    <link rel="stylesheet" href="{% static 'css/mobile.css'%}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="shortcut icon" href="{% static 'image/logo.png'%}" type="image/x-icon">
+</head>
+
+<body>
+    <Section class="header">
+        <nav class="navbar">
+            <div class="logo">
+                <img src="{% static 'image/logo.png' %}" alt="">
+                <h1>Environment soldiers</h1>
+
+            </div>
+            <ul>
+                <li><a href="{% url 'home'%}">Home</a></li>
+                <li><a href="{% url 'ourmotive' %}">Our Motive</a></li>
+                <li><a href="{% url 'blog' %}">Blog</a></li>
+                <li><a href="{% url 'contact' %}">Contact Us</a></li>
+            </ul>
+        </nav>
+    </Section>
+    {% block content %}
+    
+    {% endblock %}
+
+    <section class="footer">
+        <footer>
+                <p> © 2021 copyright Environment soldiers <br> develop by <a href="">BhartiSoftwareServices.in  </a> </p>
+        </footer>
+    </section>
+</body>
+
+</html>

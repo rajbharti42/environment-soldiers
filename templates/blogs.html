@@ -1,0 +1,77 @@
+{% extends 'basic.html'%}
+{% load static %}
+{% block content %}
+<style>
+    .navbar {
+        background: #5d646e;
+    }
+
+    form input {
+        padding: 5px;
+    }
+
+    section {
+        background-color: rgba(116, 149, 116, 0.911);
+    }
+
+    .form form {
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        width: 80vw;
+
+    }
+
+    .form {
+        padding: 50px;
+    }
+
+    form label,
+    input {
+        margin: 10px;
+    }
+
+    form input {
+        height: 22px;
+    }
+
+    .bnt {
+        border: 2px;
+        color: blue;
+        margin: 15px auto;
+        width: 100px;
+
+    }
+
+    .blogs {
+        border: 2px solid black;
+
+    }
+
+    .container {
+        padding: 50px;
+
+
+    }
+
+    .blogs {
+        margin: 10px;
+    }
+    .img{
+        width:200px;
+        height:15px;}
+
+</style>
+<section class='blog'>
+    <main class="container">
+        {% for i in blogs%}
+        <div class="blogs">
+            <img src="/{{ BASIC_DIR }}/{{i.headingimg }}' alt="error">
+            <h1> {{i.title}}</h1>
+            <p>{{i.content | slice:100 }} ...</p>
+            <a class="bnt"  href="/blogpost/{{i.slug}} ">read more..</a>
+
+        </div> {% endfor %}
+    </main>
+</section>
+{% endblock %}

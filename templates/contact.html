@@ -1,0 +1,52 @@
+{% extends 'basic.html'%}
+{% block content %}
+<style>
+    .navbar{
+        background:#5d646e;
+    }
+    form input{
+        padding: 5px;
+    }
+    section{
+        background-color: rgba(116, 149, 116, 0.911);
+    }
+    .form form{
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        width: 80vw;
+        
+    }
+    .form{
+        padding: 50px;
+    }
+    form label,input{
+        margin: 10px;
+    } 
+    form input {
+        height: 22px;
+    }
+    .bnt {
+        margin: 15px auto;
+        width: 100px;
+        }
+</style>
+<section>
+    <div class="form">
+        <form action="contact" method="POST">
+        {% csrf_token %}
+            <label for="text"> Name</label>
+            <input type="text" name="name" placeholder="Enter Your Name">
+            <label for="text"  >Address</label>
+            <input type="text" name="address" placeholder="Enter Your Address">
+            <label for="email">Email</label>
+            <input type="email" name="email" placeholder="Enter Your Email">
+            <label for="text">Leave a Massege </label>
+            <textarea name="textbox"  id="" cols="30" rows="10"></textarea>
+            <button class="bnt" type="submit">Submit</button>
+        
+        </form>
+
+    </div>
+</section>
+{% endblock %}

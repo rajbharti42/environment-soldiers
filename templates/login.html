@@ -1,0 +1,55 @@
+{% extends 'basic.html'%}
+{% block content %}
+<style>
+    .navbar{
+        background:#5d646e;
+    }
+    section {
+        background-color: rgba(116, 149, 116, 0.911);
+    }
+    .login{
+        width: 100vw;
+        height: 70vh;
+        padding-top: 40px;
+    }
+    form{
+        display: flex;
+        flex-direction: column;
+        border: 2px solid black;
+        width: 60vw;
+        height: 360px;
+        margin: auto;
+        
+        padding: 60px;
+        background-color: white;
+    }
+    form label{
+        margin: 10px;
+    }
+    .bnt {
+        margin: 15px auto;
+        width: 100px;
+
+    }
+    form input{
+        padding: 5px;
+    }
+</style>
+<section class="login">
+    <form action="login" method="post">
+        <h1 class="center"> Log IN </h1>
+        {% csrf_token %}
+        <label for="text">Username</label>
+        <input type="text" name="username" placeholder="Username"><br>
+        <label for="text">Password</label>
+        <input type="text" name="password" placeholder="Password">
+        <button class="bnt" type="submit">Submit</button>
+        <div class="messages">
+            {% for message in messages%}
+            <strong>{{message}}</strong>
+            {% endfor %}
+        </div>
+    </form>
+    
+</section>
+{% endblock %}

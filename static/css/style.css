@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@600&display=swap');
+/* css reset  */
+*{
+    padding: 0px;
+    margin: 0px;
+}
+body{
+
+    font-family: 'Ubuntu', sans-serif;
+}
+
+/* design navbar */
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.logo h1{
+    margin-right: 50px; 
+    font-family: 'Baloo 2', cursive;
+    font-size: 1.8rem;
+}
+.logo img{ 
+    margin-left: 20px;
+    width: 70px;
+    
+}
+.navbar ul {
+    display: flex;
+}
+.navbar ul li {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+
+}
+.navbar ul li a {
+    text-decoration: none;
+    padding: 2px 10px;
+    color: black;
+}
+.navbar ul li a:hover{
+    background-color: rgba(117, 151, 120, 0.733);
+    border: 2px solid green; 
+    border-radius: 23px;
+}
+.navbar{
+    z-index: 2;
+    display: flex;
+}
+
+.navbar::before{
+    content: "";
+    height: 200px;
+    width: 100%;
+    position: absolute;
+    z-index: -5;
+    
+}
+
+/* home design */
+.home{
+   height: 665.5px;
+   display: flex;
+   justify-content: center;
+   justify-items: center;
+   text-align: center;
+   flex-direction: column;
+   
+   
+}
+.home a{
+    width: max-content;
+    border: 2px solid black;
+    border-radius: 5px ;
+    margin: 5px auto;
+    background-color: green;
+    padding: 5px;
+}
+.home::before{
+    content: "";
+    top: 0px;
+    left: 0px;
+    height:760px;
+    width: 100%;
+    position: absolute;
+    background-image: url("/static/image/bg.jpg");
+    background: cover;
+    background-repeat: no-repeat;
+    z-index: -1;
+   
+}
+
+/* desing ourcommunity */
+
+.ourcommunity{
+    background-color: rgba(116, 149, 116, 0.911);
+}
+.ourcommunity main{
+   
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;    
+}
+
+.ourcommunity .box {
+    margin: 35px;
+    width: 320px;
+    /* height: 550px; */
+    border: 2px solid rgb(75, 75, 75);
+    border-radius: 23px ;
+}
+.box img { 
+    margin: 2px;
+    width: 300px;
+    height: 150px;
+}
+.box p {
+    text-align: justify;
+    padding: 5px 10px;
+}
+/* important members */
+.member{
+
+    background-color:  rgba(116, 149, 116, 0.911);
+}
+.member main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+}
+.member main .m-box {
+    height: 400px;
+    width: 350px;
+    border: 2px solid black;
+    margin: 40px 10px;
+    border-radius: 15px;
+    
+
+}
+.m-box img{
+    height: 180px;
+    width: 200px;
+}
+
+
+/* utils class */
+ 
+.center{
+    text-align: center;
+    padding: 10px;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+
+hr{
+    border-top: 3px solid rgb(0, 0, 0);
+    color: black;
+}
+/* NGOS design */
+
+.NGOS{
+    background-color:  rgba(116, 149, 116, 0.911);
+}
+.NGOS main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+}
+.NGOS main .n-box{
+    width: 600px;
+    height: 300px;
+    /* border: 2px solid black; */
+    margin: 20px;
+    display: flex;
+    align-self: center;
+    align-items: center;
+   
+}
+
+.NGOS main .n-box img{
+    width: 300px;
+    height: 150px;
+}
+
+.ngoitem{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    margin: 4px;
+
+}
+.ngoitem p{
+    text-align: justify;
+}
+
+/* social media */
+.socialmedia{
+    background-color: rgba(116, 149, 116, 0.911);
+   
+
+    
+}
+.smicon a img{
+    width: 50px;
+    height: 50px;
+    margin: auto;
+   
+}
+.smicons{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+.smicon{
+    margin: 10px;
+
+    
+}
+.smicon a {
+    display: flex;
+    justify-items: center;
+    flex-direction: column;
+
+}
+.smicon a  .YouTube{
+    width: 50px;
+    height: 40px;
+    margin-bottom: 10px;
+}
+
+
+/* .footer design */
+
+.footer{
+    background-color: black;
+    display: flex;
+    justify-content: center;
+
+}
+.footer p{
+    text-align: center;
+    color: white;
+    margin: 30px;
+}
+footer p a{
+    color: blue;
+    text-decoration: underline;
+}
+ 

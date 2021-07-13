@@ -1,0 +1,55 @@
+@media only screen and (max-width: 745px)  { 
+    .logo h1{
+        font-size: 0.9rem;
+    }
+    .navbar{
+        display: flex;
+        flex-direction: column;
+    }
+    .navbar ul {
+        margin: auto;
+
+    }
+   
+    .navbar ul li a:hover{
+       background-color: rgba(117, 151, 120, 0.733);
+       border: 2px solid green; 
+       border-radius: 23px;}
+       .home{
+    
+        height: 640.5px;
+        display: flex;
+        justify-content: center;
+        justify-items: center;
+        text-align: center;
+        flex-direction: column;
+        
+     }
+    .ourcommunity .box {
+        width: 280px;
+        /* height: 550px; */
+        border: 2px solid rgb(75, 75, 75);
+        border-radius: 23px ;
+    }
+    .box img { 
+        margin: 2px;
+        width: 290px;
+        height: 150px;
+    }
+    .box p {
+        text-align: justify;
+        padding: 2px 5px;
+    }
+    .NGOS main .n-box{
+        width: 600px;
+        height: 300px;
+        /* border: 2px solid black; */
+        margin: 20px;
+        display: flex;
+        align-self: center;
+        align-items: center;
+        flex-direction: column;
+       
+    }
+ }
+
